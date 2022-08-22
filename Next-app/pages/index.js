@@ -18,8 +18,29 @@ export default function App() {
           name="keywords"
           content="Next.js,react,javascript,SASS,SCSS,CSS,HTML-5,Progressive-Web-app,Navigation,dropdown"
         />
+        <title>Frontend Mentor | Intro section with dropdown navigation</title>
       </Head>
-      <main>Hello</main>
+      <nav>
+        <ul>
+          <li>Features</li>
+          <li>Company</li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+        <ul>
+          <li>Login</li>
+          <li>Register</li>
+        </ul>
+      </nav>
+      <main>
+        <h1>Make remote work</h1>
+        <section>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+          <button>Learn more</button>
+        </section>
+        <section></section>
+      </main>
     </>
   );
 }
