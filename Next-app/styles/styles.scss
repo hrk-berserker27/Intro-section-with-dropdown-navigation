@@ -37,6 +37,10 @@ nav {
         font-size: 15px;
         padding-top: 2px;
 
+        li:hover {
+            cursor: pointer;
+        }
+
         @media (max-width: 1400px) {
             font-size: 14px;
         }
@@ -44,7 +48,7 @@ nav {
 
     .first-list {
 
-        gap: 3.5em;
+        gap: 2.2em;
         margin-left: 4em;
 
         @media (max-width: 1400px) {
@@ -53,17 +57,43 @@ nav {
 
         .features,
         .company {
-            position: relative;
+            display: inline-flex;
 
-            &::after {
-                position: absolute;
-                content: url(../public/images/icon-arrow-down.svg);
-                left: calc(100% + 0.3em);
+            span {
+                display: inline-block;
+                background-image: url(../public/images/icon-arrow-down.svg);
+                height: 50%;
+                width: 1em;
+                background-repeat: no-repeat;
+                background-position-x: 2px;
+                background-position-y: 3px;
+            }
+
+            &:hover {
+                span {
+                    background-image: url(../public/images/icon-arrow-up.svg);
+                }
             }
         }
 
-        li:last-child {
-            transform: translateX(-1em);
+        .features {
+            position: relative;
+
+            .item-list {
+                display: none;
+            }
+
+            &:hover .item-list {
+                width: 11em;
+                height: max-content;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 90%;
+                right: 0%;
+                border: 2px solid;
+                border-radius: 1em;
+            }
         }
     }
 
@@ -150,6 +180,13 @@ main {
                 border: none;
                 color: hsl(0, 0%, 98%);
                 background-color: hsl(0, 0%, 8%);
+
+                &:hover {
+                    background-color: hsl(0, 0%, 98%);
+                    color: hsl(0, 0%, 8%);
+                    cursor: pointer;
+                    border: 2px solid;
+                }
 
                 @media (max-width: 1400px) {
                     margin-top: 2.8em;
