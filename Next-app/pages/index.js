@@ -33,8 +33,8 @@ export default function App() {
           </span>
           <ul className="first-list">
             <li className="features">
-              Features<span></span>
-              <span class="item-list">
+              Features<span className="icon"></span>
+              <span className="item-list">
                 <span id="one">
                   <svg
                     width="14"
@@ -46,7 +46,7 @@ export default function App() {
                       fill="#726CEE"
                     />
                   </svg>
-                  Todolist
+                  Todo List
                 </span>
                 <span id="two">
                   <svg
@@ -75,7 +75,6 @@ export default function App() {
                   Reminders
                 </span>
                 <span id="four">
-                  <span></span>
                   <svg
                     width="16"
                     height="16"
@@ -91,7 +90,12 @@ export default function App() {
               </span>
             </li>
             <li className="company">
-              Company<span></span>
+              Company<span className="icon"></span>
+              <span className="item-list">
+                <span>History</span>
+                <span>Our Team</span>
+                <span>Blog</span>
+              </span>
             </li>
             <li>Careers</li>
             <li>About</li>

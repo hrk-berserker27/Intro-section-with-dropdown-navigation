@@ -58,8 +58,9 @@ nav {
         .features,
         .company {
             display: inline-flex;
+            gap: 0.2em;
 
-            span {
+            .icon {
                 display: inline-block;
                 background-image: url(../public/images/icon-arrow-down.svg);
                 height: 50%;
@@ -70,7 +71,7 @@ nav {
             }
 
             &:hover {
-                span {
+                .icon {
                     background-image: url(../public/images/icon-arrow-up.svg);
                 }
             }
@@ -81,18 +82,61 @@ nav {
 
             .item-list {
                 display: none;
+                padding: 1.2em;
+
+                span {
+                    display: inline-flex;
+                    width: 100%;
+                    padding: 0.4em;
+                    gap: 0.8em;
+                    align-items: center;
+
+                    svg {
+                        display: inline-block;
+                    }
+                }
             }
 
             &:hover .item-list {
-                width: 11em;
+                width: 10em;
                 height: max-content;
                 display: flex;
                 flex-direction: column;
                 position: absolute;
-                top: 90%;
-                right: 0%;
-                border: 2px solid;
-                border-radius: 1em;
+                top: 65%;
+                right: -5%;
+                border-radius: 0.5em;
+                gap: 0.3em;
+                box-shadow: 1px 1px 25px 5px hsl(0, 0%, 8%, 0.2);
+            }
+        }
+
+        .company {
+            position: relative;
+
+            .item-list {
+                display: none;
+                padding: 1.2em;
+
+                span {
+                    display: inline-flex;
+                    width: 100%;
+                    padding: 0.4em;
+                    gap: 0.8em;
+                    align-items: center;
+                }
+            }
+
+            &:hover .item-list {
+                width: 8em;
+                height: max-content;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 65%;
+                border-radius: 0.5em;
+                gap: 0.3em;
+                box-shadow: 1px 1px 25px 5px hsl(0, 0%, 8%, 0.2);
             }
         }
     }
@@ -100,6 +144,7 @@ nav {
     .second-list {
         gap: 2.4em;
         padding-right: 0.3em;
+
 
         li:last-child {
             border: 2px solid;
