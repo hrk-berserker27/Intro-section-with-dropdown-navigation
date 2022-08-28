@@ -19,6 +19,7 @@ nav {
     padding-top: 2em;
     padding-left: 2.5em;
     padding-right: 2em;
+    position: relative;
 
     @media (max-width: 1400px) {
         svg {
@@ -27,7 +28,33 @@ nav {
     }
 
     @media (max-width: 900px) {
-        flex-direction: column;
+
+        .burger-icon {
+            position: absolute;
+            left: 90%;
+            top: 50%;
+            width: 2em;
+            height: 2em;
+            background: url(../public/images/icon-menu.svg);
+            background-color: hsl(0, 0%, 98%);
+            background-repeat: no-repeat;
+        }
+
+        .close-icon {
+            position: absolute;
+            left: 90%;
+            top: 50%;
+            width: 2em;
+            height: 2em;
+            background: url(../public/images/icon-close-menu.svg);
+            background-color: white;
+            background-repeat: no-repeat;
+        }
+
+        .hidden {
+            z-index: -1;
+        }
+
     }
 
     .logo-container {

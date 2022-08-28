@@ -100,6 +100,8 @@ export default function App() {
             <li>Careers</li>
             <li>About</li>
           </ul>
+          <span className="burger-icon"></span>
+          <span className="close-icon hidden"></span>
         </div>
 
         <ul className="second-list">
