@@ -8,7 +8,6 @@
 }
 
 body {
-    width: 100%;
     min-height: 100vh;
     background-color: hsl(0, 0%, 98%);
 }
@@ -28,10 +27,12 @@ nav {
     }
 
     @media (max-width: 900px) {
+        padding-right: 1.5em;
+        padding-left: 1.5em;
 
         .burger-icon {
             position: absolute;
-            left: 90%;
+            left: calc(100vw - 3em);
             top: 50%;
             width: 2em;
             height: 2em;
@@ -42,7 +43,7 @@ nav {
 
         .close-icon {
             position: absolute;
-            left: 90%;
+            left: calc(100vw - 3em);
             top: 50%;
             width: 2em;
             height: 2em;
@@ -245,7 +246,6 @@ nav {
 
 main {
     display: flex;
-
     min-height: 120vh;
     padding-bottom: 5em;
     width: 100%;
@@ -255,7 +255,20 @@ main {
         gap: 8.5em;
     }
 
+    @media (max-width: 900px) {
+        padding-top: 0em;
+        flex-direction: column;
+        flex-flow: column-reverse;
+        gap: 1em;
+        padding-bottom: 0;
+        padding-top: 1em;
+        justify-content: center;
+        min-height: 137vh;
+    }
 
+    @media (max-width: 400px) {
+        min-height: 110vh;
+    }
 
     section {
         padding-top: 6.3em;
@@ -272,6 +285,12 @@ main {
         flex-direction: column;
         gap: 3em;
 
+        @media (max-width: 900px) {
+            flex: 1;
+            padding: 1em;
+            gap: 1em;
+        }
+
         h1 {
             font-weight: 800;
 
@@ -283,6 +302,12 @@ main {
             letter-spacing: 0px;
             width: 11ch;
             color: hsl(0, 0%, 8%);
+
+            @media (max-width: 900px) {
+                font-size: 2.2rem;
+                width: 100%;
+                text-align: center;
+            }
         }
 
         p {
@@ -295,6 +320,11 @@ main {
             @media (max-width: 1400px) {
                 font-size: 16px;
                 line-height: 1.5em;
+            }
+
+            @media (max-width: 900px) {
+                width: 100%;
+                text-align: center;
             }
 
             button {
@@ -322,6 +352,10 @@ main {
                     font-size: 16px;
                     padding-left: 1.7em;
                 }
+
+                @media (max-width: 900px) {
+                    margin: 2em auto;
+                }
             }
         }
 
@@ -340,6 +374,18 @@ main {
                     zoom: 90%;
                 }
             }
+
+            @media (max-width: 900px) {
+                justify-content: space-evenly;
+                gap: 0;
+                flex-wrap: wrap;
+                padding-right: 1em;
+                margin-top: 0;
+
+                svg {
+                    zoom: 90%;
+                }
+            }
         }
     }
 
@@ -352,6 +398,13 @@ main {
         @media (max-width: 1400px) {
             background-size: 69%;
             background-position: 60% 50%;
+        }
+
+        @media (max-width: 900px) {
+            background-image: url(../public/images/image-hero-mobile.png);
+            background-size: 100%;
+            flex-grow: 3;
+            background-position: 0% 0%;
         }
     }
 
