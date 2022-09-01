@@ -1,5 +1,8 @@
 import Head from "next/head";
 export default function App() {
+  const handleClick = (event) => {
+    console.log(event);
+  };
   return (
     <>
       <Head>
@@ -100,7 +103,7 @@ export default function App() {
             <li>Careers</li>
             <li>About</li>
           </ul>
-          <span className="burger-icon"></span>
+          <span className="burger-icon" onClick={handleClick()}></span>
           <span className="close-icon hidden"></span>
         </div>
 
