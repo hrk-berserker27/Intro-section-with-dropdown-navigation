@@ -1,8 +1,28 @@
 import Head from "next/head";
 export default function App() {
-  const handleClick = (event) => {
-    console.log(event);
-  };
+  let list, secondList, handleClick, handleCancel, cancel, burger, nav, main;
+  if (typeof window !== "undefined") {
+    list = document.querySelector(".first-list");
+    secondList = document.querySelector(".second-list");
+    burger = document.querySelector(".burger-icon");
+    cancel = document.querySelector(".close-icon");
+    nav = document.getElementsByTagName("nav")[0];
+    main = document.getElementsByTagName("main")[0];
+
+    handleClick = () => {
+      list.classList.add("visible");
+      secondList.classList.add("show");
+      burger.classList.add("hidden");
+      cancel.classList.remove("hidden");
+    };
+    handleCancel = () => {
+      cancel.classList.add("hidden");
+      burger.classList.remove("hidden");
+      list.classList.remove("visible");
+      secondList.classList.remove("show");
+    };
+  }
+
   return (
     <>
       <Head>
@@ -103,8 +123,8 @@ export default function App() {
             <li>Careers</li>
             <li>About</li>
           </ul>
-          <span className="burger-icon" onClick={handleClick()}></span>
-          <span className="close-icon hidden"></span>
+          <span className="burger-icon" onClick={handleClick}></span>
+          <span className="close-icon hidden" onClick={handleCancel}></span>
         </div>
 
         <ul className="second-list">
