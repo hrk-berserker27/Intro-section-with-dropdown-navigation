@@ -9,7 +9,7 @@ This is a solution for the Intro section with dropdown navigation coding challen
 
 ## The challenge
 
-Your challenge is to build out this intro section with dropdown navigation and get it looking as close to the design as possible.
+My challenge was to build out this intro section with dropdown navigation and get it looking as close to the design as possible.
 My users should be able to:
 
 - View the relevant dropdown menus on desktop and mobile when interacting with the navigation links
