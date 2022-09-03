@@ -1,25 +1,28 @@
 import Head from "next/head";
 export default function App() {
-  let list, secondList, handleClick, handleCancel, cancel, burger, nav, main;
+  let modal, list, secondList, handleClick, handleCancel, cancel, burger, body;
   if (typeof window !== "undefined") {
     list = document.querySelector(".first-list");
     secondList = document.querySelector(".second-list");
     burger = document.querySelector(".burger-icon");
     cancel = document.querySelector(".close-icon");
-    nav = document.getElementsByTagName("nav")[0];
-    main = document.getElementsByTagName("main")[0];
+    body = document.getElementsByTagName("body")[0];
+    modal = document.createElement("div");
 
     handleClick = () => {
       list.classList.add("visible");
       secondList.classList.add("show");
       burger.classList.add("hidden");
       cancel.classList.remove("hidden");
+      body.append(modal);
+      modal.classList.add("modal");
     };
     handleCancel = () => {
       cancel.classList.add("hidden");
       burger.classList.remove("hidden");
       list.classList.remove("visible");
       secondList.classList.remove("show");
+      modal.remove();
     };
   }
 

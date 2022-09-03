@@ -10,6 +10,15 @@
 body {
     min-height: 100vh;
     background-color: hsl(0, 0%, 98%);
+
+    .modal {
+        position: absolute;
+        background-color: hsl(0, 0%, 0%);
+        width: calc(100% - 60vw);
+        height: 100%;
+        top: 0;
+        opacity: 0.5;
+    }
 }
 
 nav {
@@ -107,7 +116,7 @@ nav {
         @media (max-width: 900px) {
             position: absolute;
             flex-direction: column;
-            width: 50vw;
+            width: 60vw;
             right: 0;
             top: 0%;
             padding-top: 5em;
@@ -249,7 +258,7 @@ nav {
             top: var(--heightOfTopList);
             flex-direction: column;
             align-items: center;
-            width: 50vw;
+            width: 60vw;
             background-color: hsl(0, 0%, 98%);
             height: 50vh;
             top: 340px;
